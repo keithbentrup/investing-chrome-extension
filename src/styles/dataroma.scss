@@ -1,0 +1,12 @@
+body { // wrap in body to increase css specificity above native rules
+  #grid {
+    td {
+      vertical-align: top;
+    }
+    .tit_ctl div {
+      display: block;
+      font-size: 0.65rem;
+      width: 10rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import 'colors';
+
+.oh-roll-results-container {
+  background: rgba($color: #fff, $alpha: 1.0);
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  // display: flex;
+  // justify-content: flex-end;
+  input {
+    width: 35px;
+    text-align: right;
+  }
+  input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .oh-roll-summary {
+    padding: 0 5px 0 0;
+    // width: 235px;
+  }
+  .oh-roll-results-table-container {
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 150px;
+  }
+  .oh-roll-results-table-container::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa; /* or add it to the track */
+  }
+  .oh-roll-results-table-container::-webkit-scrollbar-thumb {
+    background: #13567f;
+  }
+  .oh-roll-results-table {
+    display: inline-table;
+    border-collapse: collapse;
+    font-size: 12px;
+    th, td {
+      white-space: nowrap;
+    }
+    th {
+      //font-weight: bold;
+      font-size: 11;
+      text-align: center;
+    }
+    td {
+      text-align: right;
+    }
+    .oh-roll-strike, .oh-roll-credit, .oh-roll-delta {
+      border-right: solid 1px black;
+      padding: 0 5px;
+    }
+    .oh-roll-credit {
+      background-color: #1d79b1;
+      color: #fff;
+    }
+    .oh-roll-found {
+      background-color: $light-green;
+    }
+    .oh-roll-not-found {
+      background-color: #f1aaaa;
+    }
+    .oh-roll-row-even {
+      background-color: #90c3f0;
+    }
+    .oh-roll-row-odd {
+      background-color: #aad0f1;
+    }
+    .oh-roll-header, .oh-roll-row-odd:hover, .oh-roll-row-even:hover {
+      background-color: #1d79b1;
+      color: #fff;
+    }
+  }
+}

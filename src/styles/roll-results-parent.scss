@@ -1,0 +1,14 @@
+.oh-roll-results-iframe-container, .oh-roll-results-iframe{
+  width: 535px !important;
+  height: 150px !important;
+  overflow: visible !important;
+  min-width: 535px !important;
+  max-width: 535px !important;
+  min-height: 150px !important;
+  max-height: 150px !important;
+}
+
+.oh-roll-results-iframe {
+  position: absolute;
+  z-index: 9999;
+}

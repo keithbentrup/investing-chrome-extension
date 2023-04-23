@@ -1,0 +1,37 @@
+@import 'normalize';
+@import 'colors';
+
+body {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+ul {
+  float: left;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+li:hover {
+  background-color:  darken($light-green, 10%);
+}
+
+.oh-fav-icon {
+  height: 16px;
+  width: 16px;
+  vertical-align: baseline;
+  padding-right: 0.25rem;
+}
+
+.oh-current-TLD {
+  background-color: $light-green;
+}

@@ -1,0 +1,16 @@
+@import 'roll-results-parent';
+@import 'nav-parent';
+@import 'colors';
+
+.oh-etrade-pos-summary {
+  font-size: 12px;
+  span {
+    white-space: nowrap;
+  }
+}
+
+// [role="row"], [role="rowgroup"], [role="rowgroup"] {
+//   height: 150px !important;
+//   overflow: visible;
+//   display: block !important;
+// }

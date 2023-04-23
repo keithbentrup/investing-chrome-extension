@@ -1,0 +1,37 @@
+// this file is for globally included styles
+
+@import 'normalize';
+@import 'jquery-ui-dist/jquery-ui.css';
+@import '@mdi/font/css/materialdesignicons.css';
+@import 'colors';
+
+html {
+  font-family: Calibri, sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.oh-n-a {
+  color: $light-grey;
+  font-size: smaller;
+}
+
+.oh-seller-OTM {
+  background-color: $light-green;
+}
+.oh-seller-NTM, .oh-highlight-warning {
+  background-color: $light-yellow;
+}
+.oh-seller-ITM, .oh-highlight-alarm {
+  background-color: $light-red;
+}
+.oh-call-opt {
+  background-color: #98e0f6;
+}
+.oh-put-opt {
+  background-color: #e9b9f1;
+}

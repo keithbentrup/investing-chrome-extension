@@ -1,0 +1,298 @@
+<!-- 
+  test page python3 -m http.server -d .
+  http://localhost:8000/portfolio.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+  
+</head>
+
+<body>
+
+
+  <table style="padding-left: 250px;">
+    <tbody app-holdings-table-body-grouping="" >
+      <tr class="c11n-table__tr">
+        <th scope="rowgroup" class="sticky-left divider-label" id="Option" >Stocks and
+          options</th>
+      </tr>
+      <tr>
+        <td class="d-table-cell d-lg-none" colspan="7">
+          <hr class="divider-line">
+        </td>
+        <td class="d-lg-table-cell d-none" colspan="8">
+          <hr class="divider-line">
+        </td>
+      </tr>
+      <tr class="c11n-table__tr">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span>
+                            AMZN<br></span></span></span><span class="holding_name">AMAZON.COM
+                        INC</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span>
+                            AMZN<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">AMAZON.COM
+                  INC</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $98.95 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$1.09 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -1.09% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> 100.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          $9,895.00 </td>
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-call oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> AMZN
+                            230331 C
+                            98.00<br></span></span></span><span class="holding_name">CALL AMAZON COM INC $98 EXP
+                        03/31/23</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> AMZN 230331 C
+                            98.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">CALL AMAZON COM INC $98 EXP
+                  03/31/23</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $3.58 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$0.67 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -15.76% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> -1.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          -$358.00 </td>
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-put oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> FIS
+                            230721 P
+                            65.00<br></span></span></span><span class="holding_name">PUT FIDELITY NATL INFO $65 EXP
+                        07/21/23</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> FIS 230721 P
+                            65.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">PUT FIDELITY NATL INFO $65 EXP
+                  07/21/23</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $12.33 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> +$0.80 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> +6.15% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> -1.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          -$1,233.00 </td>
+
+      </tr>
+      <tr class="c11n-table__tr">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span>
+                            PACW<br></span></span></span><span class="holding_name">PACWEST BANCORP
+                        DELAWARE</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span>
+                            PACW<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">PACWEST BANCORP
+                  DELAWARE</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $9.28 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$2.17 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -18.95% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> 500.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          $4,640.00 </td>
+
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-call oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> PACW
+                            230421 C
+                            15.00<br></span></span></span><span class="holding_name">CALL PACWEST BANCORP $15 EXP
+                        04/21/23</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> PACW 230421 C
+                            15.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">CALL PACWEST BANCORP $15 EXP
+                  04/21/23</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $1.05 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$0.55 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -34.38% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> -5.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          -$525.00 </td>
+
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-zero-quantity oh-vanguard-call oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> PACW
+                            230421 C
+                            20.00<br></span></span></span><span class="holding_name">CALL PACWEST BANCORP $20 EXP
+                        04/21/23</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> PACW 230421 C
+                            20.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">CALL PACWEST BANCORP $20 EXP
+                  04/21/23</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $0.41 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$0.24 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -36.92% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> 0.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option"> $0.00
+        </td>
+
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-call oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> SPY
+                            230331 C
+                            400.00<br></span></span></span><span class="holding_name">CALL SPDR S&amp;P 500 ETF TR $400
+                        EXP 03/31/23 UNIT SER
+                        1</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> SPY 230331 C
+                            400.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">CALL SPDR S&amp;P 500 ETF TR
+                  $400 EXP 03/31/23 UNIT SER 1</span></span></span></app-holdings-ticker>
+        </th>
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $2.93 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -$1.22 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> -29.4% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> -1.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          -$293.00 </td>
+
+      </tr>
+      <tr class="c11n-table__tr oh-vanguard-put oh-vanguard-opt">
+        <th class="c11n-table__td c11n-table__td--sortable sticky-left d-table-cell d-lg-none" headers="self_managed_table_2_symbol Option"><app-holdings-ticker><span><span><span><a
+                    class="c11n-link c11n-link--secondary c11n-link--independent"   href=""><span class="c11n-link__content"><span
+                        class="holding_ticker ticker-em-dash text-align-start"><span><span> XLF
+                            230421 P
+                            34.00<br></span></span></span><span class="holding_name">PUT SECTOR SPDR $34 EXP 04/21/23
+                        FINANCIAL</span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; border-right: none !important; padding-right: 24px !important;"
+          headers="self_managed_table_2_symbol Option "><app-holdings-ticker type="ticker"><span><span><span><a class="c11n-link c11n-link--secondary c11n-link--independent" 
+                     href=""><span class="c11n-link__content"><span class="holding_ticker ticker-em-dash text-align-start"><span><span> XLF 230421 P
+                            34.00<br></span></span></span></span></a></span></span></span></app-holdings-ticker>
+        </th>
+        <th class="c11n-table__td c11n-table__td--sortable d-lg-table-cell d-none" style="text-align: left !important; padding-left: 0px !important;" headers="self_managed_table_2_name Option">
+          <app-holdings-ticker type="name"><span><span><span class="holding_name">PUT SECTOR SPDR $34 EXP
+                  04/21/23 FINANCIAL</span></span></span></app-holdings-ticker>
+        </th>
+
+        <td class="c11n-table__td" headers="self_managed_table_2_price Option"> $3.30 </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangeAmount Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> +$0.80 </div>
+        </td>
+        <td class="c11n-table__td" headers="self_managed_table_2_priceChangePercent Option">
+          <div class="holdings-changes-container"><app-holdings-changes >
+              <div content=""></div>
+            </app-holdings-changes> +32% </div>
+        </td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_quantity Option"> -1.000</td>
+        <td class="c11n-table__td c11n-table__td--sortable" headers="self_managed_table_2_currentBalance Option">
+          -$330.00 </td>
+
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

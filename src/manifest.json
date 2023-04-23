@@ -1,0 +1,90 @@
+{
+  "name": "Options Helper",
+  "short_name": "OH",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Options Helper description",
+  "icons": {
+    "16": "images/favicon-16x16.png",
+    "48": "images/favicon-32x32.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.webpack.js"
+  },
+  "permissions": [
+    "management",
+    "activeTab",
+    "background",
+    "browsingData",
+    "clipboardWrite",
+    "contentSettings",
+    "declarativeContent",
+    "downloads",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ally.com/*",
+        "*://*.dataroma.com/*",
+        "*://*.etrade.com/*",
+        "*://etrade.com/*",
+        "*://finance.yahoo.com/*",
+        "*://google.com/finance/*",
+        //"*://localhost:*/*",
+        "*://*.vanguard.com/*",
+        "*://vanguard.com/*",
+        "*://www.google.com/finance/*"
+      ],
+      "js": [
+        "scripts/content.webpack.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/favicon-16x16.png",
+      "32": "images/favicon-32x32.png"
+    },
+    "default_title": "Options Helper",
+    "default_popup": "html/popup.html"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "scripts/*",
+      "styles/*",
+      "html/links.html",
+      "images/*",
+      "earnings-cal/*",
+      "option-chains-latest/*"
+    ],
+    "matches": [
+      "*://*.ally.com/*",
+      "*://*.etrade.com/*",
+      "*://google.com/*",
+      "*://*.vanguard.com/*",
+      "*://etrade.com/*",
+      "*://finance.yahoo.com/*",
+      //"*://localhost:*/*",
+      "*://vanguard.com/*",
+      "*://www.dataroma.com/*",
+      "*://www.google.com/*"
+    ]
+  }],
+  "externally_connectable": {
+    "matches": [
+      "*://*.ally.com/*",
+      "*://*.dataroma.com/*",
+      "*://*.etrade.com/*",
+      "*://etrade.com/*",
+      "*://www.google.com/*",
+      //"*://localhost:*/*",
+      "*://*.vanguard.com/*",
+      "*://vanguard.com/*"
+    ]
+  }
+}

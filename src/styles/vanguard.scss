@@ -1,0 +1,69 @@
+@import 'roll-results-parent';
+@import 'nav-parent';
+@import 'colors';
+
+// if overriding an existing style, use the same selector within this oh-vanguard class that is added via script to the body tag
+.oh-vanguard {
+  // fix so much wasted vertical space
+  .c11n-table--small .c11n-table__td,
+  .reset-sort-button-wrapper,
+  .c11n-accordion.c11n-accordion--large .c11n-accordion__trigger,
+  .settlement-fund-info,
+  .credit-and-debit summary,
+  .table-wrapper .holdings-table__tfoot-label,
+  .table-wrapper .holdings-table__tfoot-amount,
+  .credit-and-debit details,
+  .c11n-table--small .c11n-table__thead-th {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .c11n-text-lg, .table-wrapper .holdings-table__tfoot {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .account-disclaimer-wrapper {
+    min-height: 0rem;
+  }
+
+}
+
+// if creating a new style on your own elements, prefix classes with "oh-vanguard-" to prevent collision
+
+// fore 0 qty contracts make smaller and mostly hidden
+.oh-vanguard-zero-quantity, .oh-vanguard-expired {
+  display: grid;
+  opacity: 0.15;
+  max-height: 1rem;
+  overflow: hidden;
+}
+
+.oh-vanguard-opt {
+  height: 185px;
+}
+
+.oh-vanguard-open-order {
+  color: $dark-green !important;
+}
+
+.oh-vanguard-executed-order {
+  opacity: 0.5;
+  font-variant: all-small-caps;
+}
+
+.oh-vanguard-canceled-order {
+  opacity: 0.2;
+  text-decoration: line-through;
+}
+
+// highlight unused money, options that should be closed, and orders still open after the bell
+[data-testid=settlement-fund-trade-value], .oh-after-bell-open-order td, .oh-after-bell-open-order th {
+  background-color: $light-yellow !important;
+}
+
+.oh-after-bell-open-order {
+  border-spacing: 0;
+  border-collapse: 0;
+  border: none;
+}

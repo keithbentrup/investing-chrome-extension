@@ -1,0 +1,49 @@
+{
+  "name": "option-helper",
+  "private": true,
+  "devDependencies": {
+    "@mdi/font": "^7.1.96",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jquery": "3.6.3",
+    "jquery-ui-dist": "^1.13.1",
+    "luxon": "^3.2.1",
+    "sass": "^1.54.8",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "globals": {
+      "chrome": true
+    },
+    "rules": {
+      "eol-last": 0,
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  },
+  "dependencies": {
+    "@mdi/font": "^7.1.96",
+    "jquery": "3.6.3",
+    "jquery-ui-dist": "^1.13.1",
+    "lodash": "^4.17.21",
+    "luxon": "^3.2.1",
+    "sass": "^1.54.8"
+  },
+  "scripts": {
+    "build": "node src/scripts/prepare-dist.js && webpack",
+    "watch": "node src/scripts/prepare-dist.js && webpack --watch",
+    "start": "webpack serve --open"
+  }
+}

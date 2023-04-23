@@ -1,0 +1,8 @@
+opt-env
+__pycache__/
+config/.*
+data
+dist
+node_modules
+sensitive.html
+*.log
