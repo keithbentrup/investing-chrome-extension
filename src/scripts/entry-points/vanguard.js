@@ -29,7 +29,7 @@ when does margin come into play? only overnight
 */
 
 // if we just logged on, go to the portfolio page (not the balances page)
-if (location.href === 'https://balances.web.vanguard.com/' && document.referrer === 'https://personal.vanguard.com/') {
+if ((location.href === 'https://balances.web.vanguard.com/' || location.href === 'https://dashboard.web.vanguard.com/') && document.referrer === 'https://personal.vanguard.com/') {
   location.href = 'https://personal.vanguard.com/us/myaccounts/balancesholdings'
 }
 
