@@ -1,13 +1,22 @@
 import $ from 'jquery'
 import linksHTML from '../../html/links.html'
+import searchHTML from '../../html/search.html'
 
 import '../../styles/popup.scss'
 
 $(document.body).append(linksHTML)
+$(document.body).append(searchHTML)
 
 console.log('hi from the popup script!')
 
-$(document.body).append(`
-  <input type="text" id="oh-input" placeholder="enter a ticker" />
-  
-`)
+// on enter in the search box, search for the ticker
+$('#oh-tckr-input').on(`keyup`, (e) => {
+  if (e.key === 'Enter') {
+    const tckr = $('#oh-tckr-input').val().toUpperCase(),
+      urls = []
+    $('.oh-tckr-link').each((i, el) => {
+      urls.push($(el).data('url').replace('{{tckr}}', tckr))
+    })
+    chrome.windows.create({ url: urls })
+  }
+})

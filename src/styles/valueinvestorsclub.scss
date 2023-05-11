@@ -1,0 +1,8 @@
+// get rid of annoying survey that's interrupting research
+
+#survey_modal, #survey_result_modal, .modal-backdrop {
+  display: none !important;
+}
+.modal-open {
+  overflow: auto !important;
+}

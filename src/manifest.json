@@ -34,6 +34,7 @@
         "*://finance.yahoo.com/*",
         "*://google.com/finance/*",
         //"*://localhost:*/*",
+        "*://valueinvestorsclub.com/*",
         "*://*.vanguard.com/*",
         "*://vanguard.com/*",
         "*://www.google.com/finance/*"
@@ -70,6 +71,7 @@
       "*://etrade.com/*",
       "*://finance.yahoo.com/*",
       //"*://localhost:*/*",
+      "*://valueinvestorsclub.com/*",
       "*://vanguard.com/*",
       "*://www.dataroma.com/*",
       "*://www.google.com/*"

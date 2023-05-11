@@ -25,6 +25,7 @@ module.exports = {
     injectedRollResultsIframe: './src/scripts/entry-points/injected-roll-results-iframe.js',
     "dataroma.com": './src/scripts/entry-points/dataroma.js',
     "google.com": './src/scripts/entry-points/google.js',
+    "valueinvestorsclub.com": './src/scripts/entry-points/valueinvestorsclub.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist') + '/scripts',
