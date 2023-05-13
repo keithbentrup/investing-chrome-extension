@@ -20,3 +20,10 @@ $('#oh-tckr-input').on(`keyup`, (e) => {
     chrome.windows.create({ url: urls })
   }
 })
+
+$('.oh-tckr-link').on('click', (e) => {
+  console.log('clicked', e)
+  const tckr = $('#oh-tckr-input').val().toUpperCase(),
+    url = $(e.target).data('url').replace('{{tckr}}', tckr)
+  chrome.tabs.create({ url: url })
+})
