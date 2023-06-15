@@ -2,7 +2,7 @@
 @import 'colors';
 
 body {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 ul {
@@ -34,4 +34,14 @@ li:hover {
 
 .oh-current-TLD {
   background-color: $light-green;
+}
+
+.mdi-arrow-left-circle-outline, .mdi-arrow-right-circle-outline {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+.mdi-arrow-right-circle-outline {
+  display: none;
 }

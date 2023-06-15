@@ -18,14 +18,15 @@ module.exports = {
     content: './src/scripts/entry-points/content-injector.js',
     // the persistent script
     localhost: './src/scripts/entry-points/localhost.js',
-    "etrade.com": './src/scripts/entry-points/etrade.js',
-    "vanguard.com": './src/scripts/entry-points/vanguard.js',
-    "ally.com": './src/scripts/entry-points/ally.js',
     injectedNavIframe: './src/scripts/entry-points/injected-nav-iframe.js',
     injectedRollResultsIframe: './src/scripts/entry-points/injected-roll-results-iframe.js',
+    "ally.com": './src/scripts/entry-points/ally.js',
     "dataroma.com": './src/scripts/entry-points/dataroma.js',
+    "etrade.com": './src/scripts/entry-points/etrade.js',
+    "interactivebrokers.com": './src/scripts/entry-points/interactivebrokers.js',
     "google.com": './src/scripts/entry-points/google.js',
     "valueinvestorsclub.com": './src/scripts/entry-points/valueinvestorsclub.js',
+    "vanguard.com": './src/scripts/entry-points/vanguard.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist') + '/scripts',

@@ -26,3 +26,16 @@ $('.mdi-toggle-switch').on('click', function (ev) {
   ev.preventDefault()
 })
 
+$('.mdi-arrow-left-circle-outline, .mdi-arrow-right-circle-outline').on('click', function (ev) {
+  let open = {
+      left: -105
+    },
+    close = {
+      left: 0
+    }
+  $('.oh-nav-links', window.parent.document).css(
+    /right/.test(ev.target.className) ? close : open
+  )
+  $('.mdi-arrow-left-circle-outline, .mdi-arrow-right-circle-outline').toggle()
+  ev.preventDefault()
+})
