@@ -28,7 +28,7 @@ $('.mdi-toggle-switch').on('click', function (ev) {
 
 $('.mdi-arrow-left-circle-outline, .mdi-arrow-right-circle-outline').on('click', function (ev) {
   let open = {
-      left: -105
+      left: -110
     },
     close = {
       left: 0

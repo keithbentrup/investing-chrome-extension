@@ -7,6 +7,9 @@ import { downloadXHR } from '../lib/xhr.js'
 import '../../styles/vanguard.scss'
 
 window.jq363 = jq363 // not required but make it available to the console for debugging
+
+
+// download the orders json - for vanguard, this provides more transaction information than using the updateSavedPositions() function
 downloadXHR([
   {
     url: 'https://personal1.vanguard.com/xos-order-status-api/orders',
@@ -14,6 +17,7 @@ downloadXHR([
   }
 ])
 //vanguardStyles.use()
+
 jq363(createNavIFrame)
 console.log('On vanguard.com!')
 
