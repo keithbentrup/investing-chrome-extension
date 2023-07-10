@@ -46,12 +46,15 @@ if (/ally.com/.test(location.href)) {
 
           // add roll tables to UI
           // invoke async parts in own function, so main loop can avoid tracking promises
-          jParent = $(this).parents('.symbol-container').addClass('oh-roll-results-iframe-container')
-          ;(async function () {
-            let rolls = await OH.findRollsForCredit({fullSymbol: fullSymbol}),
-              jEl = await OH.createRollsResultIFrame(rolls)
-            jEl.css({top: jParent.offset().top, left: jParent.offset().left})
-          })()
+          jParent = $(this).parents('.symbol-container')
+          if (jParent.length) {
+            jParent.addClass('oh-roll-results-iframe-container')
+            ;(async function () {
+              let rolls = await OH.findRollsForCredit({fullSymbol: fullSymbol}),
+                jEl = await OH.createRollsResultIFrame(rolls)
+              jEl.css({top: jParent.offset().top, left: jParent.offset().left})
+            })()
+          }
         })
 
         OH.updateSavedPositions(fullSymbols)
