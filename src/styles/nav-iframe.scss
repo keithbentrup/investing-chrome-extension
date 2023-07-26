@@ -5,9 +5,9 @@ body {
   background: rgba(255, 255, 255, 0.8);
 }
 
-ul {
-  float: left;
-}
+// ul#oh-side-links {
+//   float: left;
+// }
 
 ul, li {
   list-style-type: none;
@@ -44,4 +44,10 @@ li:hover {
 
 .mdi-arrow-right-circle-outline {
   display: none;
+}
+
+.oh-popup {
+  .mdi-toggle-switch, .mdi-arrow-left-circle-outline, .mdi-arrow-right-circle-outline {
+    display: none;
+  }
 }

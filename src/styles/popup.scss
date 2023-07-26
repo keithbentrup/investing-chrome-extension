@@ -1,4 +1,5 @@
 @import 'nav-iframe';
+@import '@mdi/font/css/materialdesignicons.css';
 
 $body-width: 700px;
 
@@ -17,5 +18,17 @@ body {
   min-height: 600px;
   width: $body-width;
   margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
+section {
+  margin: 0;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#oh-tckr-input {
+  width: 6rem;
+}

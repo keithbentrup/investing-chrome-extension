@@ -1,10 +1,13 @@
 import $ from 'jquery'
+
+import config from '../../../../data/config/.config.json'
+
 import linksHTML from '../../html/links.html'
 import searchHTML from '../../html/search.html'
 
 import '../../styles/popup.scss'
 
-$(document.body).append(linksHTML)
+$(document.body).append(linksHTML).find('#gSheetsLink').attr('href', config.gSheetsLink)
 $(document.body).append(searchHTML)
 
 console.log('hi from the popup script!')

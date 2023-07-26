@@ -4,11 +4,14 @@ import { getTLD } from '../lib/util.mjs'
 import '../../styles/content.scss'
 import '../../styles/nav-iframe.scss'
 
+import config from '../../../../data/config/.config.json'
 import linksHTML from '../../html/links.html'
 
 console.log('Hi from nav iframe!')
 
-$(document.body).append(linksHTML)
+$(document.body).append('<base target="_parent">')
+$(document.body).append(linksHTML).find('#gSheetsLink').attr('href', config.gSheetsLink)
+
 
 // highlight the links related to the current TLD
 $('li').each(function () {
