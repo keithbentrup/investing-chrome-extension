@@ -43,7 +43,8 @@
         "*://valueinvestorsclub.com/*",
         "*://vanguard.com/*",
         "*://*.vanguard.com/*",
-        "*://seekingalpha.com/*"
+        "*://seekingalpha.com/*",
+        "*://www.sedarplus.ca/*"
       ],
       "js": [
         "scripts/content.webpack.js"
@@ -82,7 +83,8 @@
       "*://*.interactivebrokers.com/*",
       //"*://localhost:*/*",
       "*://valueinvestorsclub.com/*",
-      "*://vanguard.com/*"
+      "*://vanguard.com/*",
+      "*://www.sedarplus.ca/*"
     ]
   }],
   "externally_connectable": {
@@ -95,11 +97,13 @@
       "*://www.google.com/*",
       //"*://localhost:*/*",
       "*://*.vanguard.com/*",
-      "*://vanguard.com/*"
+      "*://vanguard.com/*",
+      "*://www.sedarplus.ca/*"
     ]
   },
   "host_permissions": [
-    "*://docs.google.com/*"
+    "*://docs.google.com/*",
+    "*://www.sedarplus.ca/*"
   ],
   "declarative_net_request": {
     "rule_resources": [{

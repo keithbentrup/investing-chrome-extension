@@ -12,3 +12,8 @@ chrome.downloads.onDeterminingFilename.addListener(function (item, suggest) {
 })
 
 // for debugging see https://github.com/keithbentrup/manifest-v3-header-mod/blob/main/service-worker.js
+
+chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(function(details) {
+    console.log('KHB onRuleMatchedDebug', details)
+  }
+)

@@ -6,8 +6,7 @@ import { downloadXHR } from '../lib/xhr.js'
 
 import '../../styles/vanguard.scss'
 
-window.jq363 = jq363 // not required but make it available to the console for debugging
-
+console.log('On vanguard.com!')
 
 // download the orders json - for vanguard, this provides more transaction information than using the updateSavedPositions() function
 downloadXHR([
@@ -18,8 +17,56 @@ downloadXHR([
 ])
 //vanguardStyles.use()
 
+function downloadActivity(jContainer) {
+  let csv = ''
+  // the account # is currently in the aria-label of the table
+  let accountNumber = jq363('table[aria-label]', jContainer).attr('aria-label')
+  accountNumber = accountNumber.match(/\s(\d{5,})\s/)[1] // get the 1st number with 5 or more digits
+  jq363('.c11n-table tr', jContainer).each(function () {
+    csv += csv == '' ? 'Account Number,' : accountNumber + ',' // add account number to each row except the header
+    jq363('th, td', this).each(function() {
+      csv += jq363(this).text().trim()
+        .replace(/,/g, '') // remove any comma within a th or td
+        .replace(/,-,/g,',,') // "empty" cells are represented with a dash, so remove it
+        + ','
+    })
+    csv = csv.replace(/,{2}$/, '') // remove 2 trailing commas from 2 empty trailing cells
+    csv += '\n'
+  })
+
+  let jEl = jq363('<a>').attr('href', `data:text/plain;charset=utf-8,${encodeURIComponent(csv)}`)
+    .attr('download', `${accountNumber}-historical-vanguard-activity.csv`)
+    .css({display: 'none'})
+    .appendTo(document.body)
+  jEl[0].click()
+  jEl.remove()
+}
+
+window.jq363 = jq363 // not required but make it available to the console for debugging
 jq363(createNavIFrame)
-console.log('On vanguard.com!')
+
+
+// on activity page, add download button to download prior year(s) activity
+// it's better to use the official download method for up to the last 18 months b/c it includes the actual trading symbols
+// but this will work as a mostly 1 time option for historical data
+// remember to fully expand the range using "Show more" below in the page before clicking the button
+if (/transactions.web.vanguard.com/.test(location.href)) {
+  let findRangeSelectorInterval = setInterval(function () {
+    let jRangeSelector = jq363('.c11n-dropdown__label:contains(range)')
+    if (jRangeSelector.length) {
+      clearInterval(findRangeSelectorInterval)
+      jRangeSelector.each(function () {
+        let link = jq363('<a href="#" style="font-size: 1rem; position: relative;">Select, fully expand below, then click -> ⤵️</a>').appendTo(jq363(this)),
+          jTransContainer = jq363(this).parents('.c11n-accordion__body-content')
+        link.on('click', function (ev) {
+          ev.preventDefault()
+          downloadActivity(jTransContainer)
+        })
+      })
+    }
+  }, 75)
+}
+
 
 /* want link to
 6. show %time and %profit per contract
@@ -160,16 +207,16 @@ jq363(function () {
             
           // add roll tables to UI
           // invoke async parts in own function, so main loop can avoid tracking promises
-          let that = this
-          ;(async function () {
-            let rolls = await OH.findRollsForCredit({fullSymbol: fullSymbol}),
-              jEl = await OH.createRollResult(rolls)
-            //console.log('jEl', jEl, 'that', that)
-            let thatTop = jq363(that).offset().top,
-              thatLeft = jq363(that).offset().left
-            //console.log('thatTop', thatTop, 'thatLeft', thatLeft)
-            jEl.css({top: thatTop + 20, left: thatLeft})
-          })()
+          // let that = this
+          // ;(async function () {
+          //   let rolls = await OH.findRollsForCredit({fullSymbol: fullSymbol}),
+          //     jEl = await OH.createRollResult(rolls)
+          //   //console.log('jEl', jEl, 'that', that)
+          //   let thatTop = jq363(that).offset().top,
+          //     thatLeft = jq363(that).offset().left
+          //   //console.log('thatTop', thatTop, 'thatLeft', thatLeft)
+          //   jEl.css({top: thatTop + 20, left: thatLeft})
+          // })()
         })
 
         OH.updateSavedPositions(fullSymbols)

@@ -1,7 +1,29 @@
+// improve the portfolio table:
 ._tb td, ._tb th {
-  padding: 0;
-  text-align: right;
-  // &:nth-of-type(2){
-  //   text-align: right;
-  // }
+  padding: 0; // more compact
+  text-align: right; // right alight all col (most are but not the tckr symbol for some reason)
+}
+
+// alternate row effect
+// every "row" is wrapped in a tbody, so have to select on tbody instead of tr
+tbody:nth-child(even) tr {
+  filter: brightness(1.1);
+}
+
+
+// TODOD
+// need portfolio col adjustment?
+// buy / call icons?
+
+
+// a closing limit order icon
+.ellipsis.mdi.mdi-progress-close {
+  color: #5d2e32;
+  &::before {
+    font-size: 1.5rem;
+    line-height: 1rem;
+    position: relative;
+    top: 1px;
+    left: -2px;
+  }
 }
